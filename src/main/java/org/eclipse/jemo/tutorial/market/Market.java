@@ -171,7 +171,7 @@ public class Market implements WebServiceModule {
         JemoMessage msg = new JemoMessage();
         msg.setModuleClass(MarketMatcher.class.getName());
         msg.setId("1");
-        msg.setPluginId(1);
+        msg.setPluginId(10); // Needs to be the same as the jemo.id value in the pom file.
         msg.setPluginVersion(1.0); // Needs to be the same as the pom version
         msg.getAttributes().put(TRADER_ID, traderId);
         msg.send(JemoMessage.LOCATION_LOCALLY);
